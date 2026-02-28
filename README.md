@@ -73,14 +73,13 @@ WantedBy=multi-user.target
 - `Restart=always` reinicia el servicio si falla.
 - `WantedBy=multi-user.target` permite que el servicio inicie con el sistema.
 
-![Estado del servicio RAM](imagen1.png)
+![Estado del servicio RAM](Capturas/imagen1.png)
 
 
 El archivo generado es:
 
 ```
 /tmp/ram_usage.log
-
 ```
 
 El cual almacena información periódica del uso de memoria.
@@ -88,7 +87,7 @@ El cual almacena información periódica del uso de memoria.
 ## Evidencia Servicio RAM
 
 
-![ram_usage.log](imagen2.png)
+![ram_usage.log](Capturas/imagen2.png)
 
 ---
 
@@ -161,7 +160,7 @@ systemctl status flask_app.service
 ```
 ## Evidencia Servicio Flask
 
-![Servidor Flask funcionando](imagen3.png)
+![Servidor Flask funcionando](Capturas/imagen3.png)
 
 Acceso desde navegador:
 
@@ -175,7 +174,7 @@ o desde otra máquina:
 http://IP_DEL_SERVIDOR:5000
 ```
 ## Evidencia del navegador
-![Servidor Flask funcionando](imagen4.png)
+![Servidor Flask funcionando](Capturas/imagen4.png)
 
 
 ---
