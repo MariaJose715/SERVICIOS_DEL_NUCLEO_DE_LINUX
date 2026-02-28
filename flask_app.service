@@ -1,0 +1,12 @@
+[Unit]
+Description=Servidor Flask en Python
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/bin/app.py
+WorkingDirectory=/usr/local/bin
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target

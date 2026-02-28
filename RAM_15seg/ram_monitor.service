@@ -1,0 +1,11 @@
+[Unit]
+Description=Servicio de monitoreo de RAM cada 15 segundos
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/ram_monitor.sh
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
