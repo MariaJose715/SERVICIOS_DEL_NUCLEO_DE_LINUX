@@ -73,13 +73,22 @@ WantedBy=multi-user.target
 - `Restart=always` reinicia el servicio si falla.
 - `WantedBy=multi-user.target` permite que el servicio inicie con el sistema.
 
+![Estado del servicio RAM](imagen1.png)
+
+
 El archivo generado es:
 
 ```
 /tmp/ram_usage.log
+
 ```
 
 El cual almacena información periódica del uso de memoria.
+
+## Evidencia Servicio RAM
+
+
+![ram_usage.log](imagen2.png)
 
 ---
 
@@ -150,6 +159,9 @@ WantedBy=multi-user.target
 ```bash
 systemctl status flask_app.service
 ```
+## Evidencia Servicio Flask
+
+![Servidor Flask funcionando](imagen3.png)
 
 Acceso desde navegador:
 
@@ -162,35 +174,9 @@ o desde otra máquina:
 ```
 http://IP_DEL_SERVIDOR:5000
 ```
+## Evidencia del navegador
+![Servidor Flask funcionando](imagen4.png)
 
----
-
-# Comandos Utilizados
-
-Recargar servicios:
-```bash
-sudo systemctl daemon-reload
-```
-
-Activar servicio:
-```bash
-sudo systemctl enable nombre_servicio
-```
-
-Iniciar servicio:
-```bash
-sudo systemctl start nombre_servicio
-```
-
-Ver estado:
-```bash
-sudo systemctl status nombre_servicio
-```
-
-Ver logs:
-```bash
-journalctl -u nombre_servicio
-```
 
 ---
 
@@ -208,12 +194,3 @@ El uso de `systemd` demuestra ser una herramienta fundamental en la administraci
 
 ---
 
-# Archivos Entregados
-
-- `ram_monitor.sh`
-- `ram_monitor.service`
-- `app.py`
-- `flask_app.service`
-- Informe (README.md)
-
----
